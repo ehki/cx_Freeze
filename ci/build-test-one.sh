@@ -92,6 +92,7 @@ elif ! [ -z "$CONDA_DEFAULT_ENV" ] ; then
         pushd $TOP_DIR
         if [ -e linux-64 ] || [ -e osx-64 ] || [ -e win-64 ] ; then
             echo "::group::Install cx-freeze from conda-build"
+            ls -l
             $CONDA_EXE install --use-local cx_freeze
         else
             echo "::group::Install cx-freeze from directory of the project"
